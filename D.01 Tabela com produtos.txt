@@ -1,0 +1,35 @@
+André de Oliveira Neves
+
+CREATE DATABASE lojinha
+
+CREATE TABLE produtos (
+    id int PRIMARY KEY AUTO_INCREMENT,
+    nome varchar(20) NOT NULL,
+    codigobarras int(8) NOT NULL,
+    preco float(10),
+    setor varchar(20)
+    )
+
+
+insira 4 produtos
+INSERT INTO produtos (nome,codigobarras,setor,preco)
+VALUES ("Pão", 12129323,"Padaria", 13.45), 
+        ("Biscoito", 87548645,"Padaria", 24.00),
+         ("Queijo Minas", 22457846,"Laticínios", 32.50),
+          ("Mortadela", 97845682,"Laticínios", 8.40),
+           ("Rexona", 12825643,"Perfumaria", 12.99),
+            ("Kolene", 98654352,"Perfumaria", 4.45);
+
+* os produtos que custem mais de 5,00 (numero decimal é float)
+SELECT id AS "ID", nome AS "Nome", codigobarras AS "Código de Barras", 
+setor AS "Setor", preco AS "Preço" FROM produtos WHERE preco > 5.00;
+
+* produtos que custem menos de 15,00
+SELECT id AS "ID", nome AS "Nome", codigobarras AS "Código de Barras", 
+setor AS "Setor", preco AS "Preço" FROM produtos WHERE preco < 15.00;
+
+* todos os produtos exibindo apenas nome e preço.
+SELECT nome AS "Nome", preco AS "Preço" FROM produtos
+
+
+

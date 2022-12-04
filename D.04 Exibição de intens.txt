@@ -1,0 +1,2 @@
+SELECT id AS "ID", nome AS "Nome", codigobarras AS "Código de Barras", 
+preco AS "Preço", quantidade AS "Quantidade" FROM produtos
